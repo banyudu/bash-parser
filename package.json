@@ -2,10 +2,20 @@
   "name": "bash-parser",
   "version": "0.5.0",
   "main": "src/index.js",
-  "description": "Standard compliant bash parser",
-  "repository": "vorpaljs/bash-parser",
+  "description": "Standard-compliant bash parser",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/banyudu/bash-parser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/banyudu/bash-parser/issues"
+  },
+  "homepage": "https://github.com/banyudu/bash-parser#readme",
   "license": "MIT",
-  "author": "vorpal-js",
+  "author": "banyudu",
+  "contributors": [
+    "vorpal-js"
+  ],
   "scripts": {
     "doc": "doctoc",
     "test": "ava && xo --ignore **/built-grammar.js",
