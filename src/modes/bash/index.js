@@ -11,8 +11,8 @@ const parameterOperators = {
 	[`^(${name}):([^:]*):?([^:]*)$`]: {
 		op: 'substring',
 		parameter: m => m[1],
-		offset: m => parseInt(m[2], 10),
-		length: m => parseInt(m[3], 10) || undefined
+		offset: m => Number.parseInt(m[2], 10),
+		length: m => Number.parseInt(m[3], 10) || undefined
 	},
 
 	// Expands to the names of variables whose names begin with prefix,
@@ -95,12 +95,18 @@ const parameterOperators = {
 		parameter: m => m[1],
 		kind: m => {
 			switch (m[2]) {
-				case 'Q': return 'quoted';
-				case 'E': return 'escape';
-				case 'P': return 'prompt';
-				case 'A': return 'assignment';
-				case 'a': return 'flags';
-				default: return 'unknown';
+				case 'Q': { return 'quoted';
+				}
+				case 'E': { return 'escape';
+				}
+				case 'P': { return 'prompt';
+				}
+				case 'A': { return 'assignment';
+				}
+				case 'a': { return 'flags';
+				}
+				default: { return 'unknown';
+				}
 			}
 		}
 	},
@@ -114,7 +120,7 @@ const parameterOperators = {
 	// performing the complete indirect expansion. The exceptions to this are the expansions
 	// of ${!prefix*} and ${!name[@]} described below. The exclamation point must immediately
 	// follow the left brace in order to introduce indirection.
-	[`^!(.+)$`]: {
+	'^!(.+)$': {
 		op: 'indirection',
 		word: m => m[1],
 		parameter: () => undefined

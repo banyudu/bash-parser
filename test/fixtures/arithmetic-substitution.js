@@ -1,22 +1,22 @@
 module.exports = {
-	sourceCode: "\"foo $((42 * 42)) baz\"",
+	sourceCode: '"foo $((42 * 42)) baz"',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "foo 43 baz",
+					text: 'foo 43 baz',
 					expansion: [
 						{
 							loc: {
 								start: 5,
 								end: 16
 							},
-							type: "ArithmeticExpansion",
-							expression: "42 * 42",
+							type: 'ArithmeticExpansion',
+							expression: '42 * 42',
 							arithmeticAST: {
-								type: "BinaryExpression",
+								type: 'BinaryExpression',
 								start: 0,
 								end: 7,
 								loc: {
@@ -30,7 +30,7 @@ module.exports = {
 									}
 								},
 								left: {
-									type: "NumericLiteral",
+									type: 'NumericLiteral',
 									start: 0,
 									end: 2,
 									loc: {
@@ -45,13 +45,13 @@ module.exports = {
 									},
 									extra: {
 										rawValue: 42,
-										raw: "42"
+										raw: '42'
 									},
 									value: 42
 								},
-								operator: "*",
+								operator: '*',
 								right: {
-									type: "NumericLiteral",
+									type: 'NumericLiteral',
 									start: 5,
 									end: 7,
 									loc: {
@@ -66,7 +66,7 @@ module.exports = {
 									},
 									extra: {
 										rawValue: 42,
-										raw: "42"
+										raw: '42'
 									},
 									value: 42
 								}
@@ -74,10 +74,10 @@ module.exports = {
 							resolved: true
 						}
 					],
-					originalText: "\"foo $((42 * 42)) baz\"",
-					type: "Word"
+					originalText: '"foo $((42 * 42)) baz"',
+					type: 'Word'
 				}
 			}
 		]
 	}
-}
+};

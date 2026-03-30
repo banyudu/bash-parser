@@ -1,47 +1,47 @@
 module.exports = {
-	sourceCode: "foo='hello ; rm -rf /'\ndest=bar\neval \"dest=foo\"",
+	sourceCode: 'foo=\'hello ; rm -rf /\'\ndest=bar\neval "dest=foo"',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "",
-					type: "Word"
+					text: '',
+					type: 'Word'
 				},
 				prefix: [
 					{
-						text: "foo=hello ; rm -rf /",
-						type: "AssignmentWord"
+						text: 'foo=hello ; rm -rf /',
+						type: 'AssignmentWord'
 					}
 				]
 			},
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "",
-					type: "Word"
+					text: '',
+					type: 'Word'
 				},
 				prefix: [
 					{
-						text: "dest=bar",
-						type: "AssignmentWord"
+						text: 'dest=bar',
+						type: 'AssignmentWord'
 					}
 				]
 			},
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "eval",
-					type: "Word"
+					text: 'eval',
+					type: 'Word'
 				},
 				suffix: [
 					{
-						text: "dest=foo",
-						type: "Word"
+						text: 'dest=foo',
+						type: 'Word'
 					}
 				]
 			}
 		]
 	}
-}
+};

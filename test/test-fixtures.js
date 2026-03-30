@@ -91,10 +91,10 @@ test('4', t => {
 
 test('5', t => {
 	const result = bashParser(
-`foo='hello ; rm -rf /'
+		`foo='hello ; rm -rf /'
 dest=bar
 eval "dest=foo"`
-);
+	);
 
 	utils.checkResults(t, result, {
 		type: 'Script',

@@ -1,31 +1,31 @@
 module.exports = {
-	sourceCode: "IFS= read -r var",
+	sourceCode: 'IFS= read -r var',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "read",
-					type: "Word"
+					text: 'read',
+					type: 'Word'
 				},
 				prefix: [
 					{
-						text: "IFS=",
-						type: "AssignmentWord"
+						text: 'IFS=',
+						type: 'AssignmentWord'
 					}
 				],
 				suffix: [
 					{
-						text: "-r",
-						type: "Word"
+						text: '-r',
+						type: 'Word'
 					},
 					{
-						text: "var",
-						type: "Word"
+						text: 'var',
+						type: 'Word'
 					}
 				]
 			}
 		]
 	}
-}
+};

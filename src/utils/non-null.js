@@ -2,9 +2,7 @@
 
 const filter = require('./filter');
 
-const nonNull = tk => {
-	return tk !== null;
-};
+const nonNull = tk => tk !== null;
 
 module.exports = filter(nonNull);
 filter.predicate = nonNull;

@@ -4,7 +4,6 @@ const test = require('ava');
 const bashParser = require('../src');
 const utils = require('./_utils');
 
-/* eslint-disable camelcase */
 test('loc in function declaration', t => {
 	const cmd =
 `foo () {

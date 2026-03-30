@@ -8,7 +8,7 @@ const tokens = require('../../../utils/tokens');
 
 const expandAlias = (preAliasLexer, resolveAlias) => {
 	function * tryExpandToken(token, expandingAliases) {
-		if (expandingAliases.indexOf(token.value) !== -1 || !token._.maybeSimpleCommandName) {
+		if (expandingAliases.includes(token.value) || !token._.maybeSimpleCommandName) {
 			yield token;
 			return;
 		}
@@ -31,9 +31,7 @@ const expandAlias = (preAliasLexer, resolveAlias) => {
 	}
 
 	return {
-		WORD: tk => {
-			return Array.from(tryExpandToken(tk, []));
-		}
+		WORD: tk => Array.from(tryExpandToken(tk, []))
 	};
 };
 

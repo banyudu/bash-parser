@@ -1,26 +1,26 @@
 module.exports = {
-	sourceCode: "run && \n stop",
+	sourceCode: 'run && \n stop',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "LogicalExpression",
-				op: "and",
+				type: 'LogicalExpression',
+				op: 'and',
 				left: {
-					type: "SimpleCommand",
+					type: 'SimpleCommand',
 					name: {
-						text: "run",
-						type: "Word"
+						text: 'run',
+						type: 'Word'
 					}
 				},
 				right: {
-					type: "SimpleCommand",
+					type: 'SimpleCommand',
 					name: {
-						text: "stop",
-						type: "Word"
+						text: 'stop',
+						type: 'Word'
 					}
 				}
 			}
 		]
 	}
-}
+};

@@ -1,42 +1,42 @@
 module.exports = {
-	sourceCode: "variable=$(echo \\`echo ciao\\`)",
+	sourceCode: 'variable=$(echo \\`echo ciao\\`)',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "",
-					type: "Word"
+					text: '',
+					type: 'Word'
 				},
 				prefix: [
 					{
-						text: "variable=$(echo \\`echo ciao\\`)",
+						text: 'variable=$(echo \\`echo ciao\\`)',
 						expansion: [
 							{
 								loc: {
 									start: 9,
 									end: 29
 								},
-								command: "echo \\`echo ciao\\`",
-								type: "CommandExpansion",
+								command: 'echo \\`echo ciao\\`',
+								type: 'CommandExpansion',
 								commandAST: {
-									type: "Script",
+									type: 'Script',
 									commands: [
 										{
-											type: "SimpleCommand",
+											type: 'SimpleCommand',
 											name: {
-												text: "echo",
-												type: "Word"
+												text: 'echo',
+												type: 'Word'
 											},
 											suffix: [
 												{
-													text: "`echo",
-													type: "Word"
+													text: '`echo',
+													type: 'Word'
 												},
 												{
-													text: "ciao`",
-													type: "Word"
+													text: 'ciao`',
+													type: 'Word'
 												}
 											]
 										}
@@ -44,10 +44,10 @@ module.exports = {
 								}
 							}
 						],
-						type: "AssignmentWord"
+						type: 'AssignmentWord'
 					}
 				]
 			}
 		]
 	}
-}
+};

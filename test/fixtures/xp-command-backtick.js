@@ -1,43 +1,43 @@
 module.exports = {
-	sourceCode: "echo `ciao`",
+	sourceCode: 'echo `ciao`',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "echo",
-					type: "Word"
+					text: 'echo',
+					type: 'Word'
 				},
 				suffix: [
 					{
-						text: "`ciao`",
+						text: '`ciao`',
 						expansion: [
 							{
 								loc: {
 									start: 0,
 									end: 5
 								},
-								command: "ciao",
-								type: "CommandExpansion",
+								command: 'ciao',
+								type: 'CommandExpansion',
 								commandAST: {
-									type: "Script",
+									type: 'Script',
 									commands: [
 										{
-											type: "SimpleCommand",
+											type: 'SimpleCommand',
 											name: {
-												text: "ciao",
-												type: "Word"
+												text: 'ciao',
+												type: 'Word'
 											}
 										}
 									]
 								}
 							}
 						],
-						type: "Word"
+						type: 'Word'
 					}
 				]
 			}
 		]
 	}
-}
+};

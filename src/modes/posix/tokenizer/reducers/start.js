@@ -67,7 +67,7 @@ module.exports = function start(state, source, reducers) {
 		};
 	}
 
-	if (!state.escaping && char.match(/\s/)) {
+	if (!state.escaping && /\s/.test(char)) {
 		return {
 			nextReduction: reducers.start,
 			tokensToEmit: tokenOrEmpty(state),

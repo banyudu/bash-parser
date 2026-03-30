@@ -12,9 +12,9 @@ module.exports = function assignmentWord() {
 
 		// check if it is an assignment
 		if (!ctx.commandPrefixNotAllowed && tk.is('WORD') && tk.value.indexOf('=') > 0 && (
-				// left part must be a valid name
-				isValidName(tk.value.slice(0, tk.value.indexOf('=')))
-			)) {
+		// left part must be a valid name
+			isValidName(tk.value.slice(0, tk.value.indexOf('=')))
+		)) {
 			return tk.changeTokenType('ASSIGNMENT_WORD', tk.value);
 		}
 

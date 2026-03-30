@@ -4,7 +4,6 @@ const test = require('ava');
 const bashParser = require('../src');
 const utils = require('./_utils');
 
-/* eslint-disable camelcase */
 test('parse if elif else', t => {
 	const cmd = `if true; then
 	echo 1;

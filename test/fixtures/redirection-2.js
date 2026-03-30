@@ -1,32 +1,32 @@
 module.exports = {
-	sourceCode: "2>&1 world",
+	sourceCode: '2>&1 world',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "test-value",
-					type: "Word"
+					text: 'test-value',
+					type: 'Word'
 				},
 				prefix: [
 					{
-						type: "Redirect",
+						type: 'Redirect',
 						op: {
-							text: ">&",
-							type: "greatand"
+							text: '>&',
+							type: 'greatand'
 						},
 						file: {
-							text: "1",
-							type: "Word"
+							text: '1',
+							type: 'Word'
 						},
 						numberIo: {
-							text: "2",
-							type: "io_number"
+							text: '2',
+							type: 'io_number'
 						}
 					}
 				]
 			}
 		]
 	}
-}
+};

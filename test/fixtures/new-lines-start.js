@@ -1,21 +1,21 @@
 module.exports = {
-	sourceCode: "\n\n\necho world",
+	sourceCode: '\n\n\necho world',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "echo",
-					type: "Word"
+					text: 'echo',
+					type: 'Word'
 				},
 				suffix: [
 					{
-						text: "world",
-						type: "Word"
+						text: 'world',
+						type: 'Word'
 					}
 				]
 			}
 		]
 	}
-}
+};

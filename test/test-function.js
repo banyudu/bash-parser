@@ -4,8 +4,6 @@ const test = require('ava');
 const bashParser = require('../src');
 const utils = require('./_utils');
 
-/* eslint-disable camelcase */
-
 test('parse function declaration multiple lines', t => {
 	const result = bashParser('foo () \n{\n command bar --lol;\n}');
 	// utils.logResults(result);

@@ -1,17 +1,17 @@
 module.exports = {
-	sourceCode: "echoword=${11}test",
+	sourceCode: 'echoword=${11}test',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "",
-					type: "Word"
+					text: '',
+					type: 'Word'
 				},
 				prefix: [
 					{
-						text: "echoword=${11}test",
+						text: 'echoword=${11}test',
 						expansion: [
 							{
 								loc: {
@@ -19,14 +19,14 @@ module.exports = {
 									end: 13
 								},
 								parameter: 11,
-								type: "ParameterExpansion",
-								kind: "positional"
+								type: 'ParameterExpansion',
+								kind: 'positional'
 							}
 						],
-						type: "AssignmentWord"
+						type: 'AssignmentWord'
 					}
 				]
 			}
 		]
 	}
-}
+};

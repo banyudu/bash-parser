@@ -18,14 +18,14 @@
   ],
   "scripts": {
     "doc": "doctoc",
-    "test": "ava && xo --ignore **/built-grammar.js",
+    "test": "ava && xo",
     "build": "mgb ./src/modes posix && mgb ./src/modes bash && mgb ./src/modes word-expansion",
-    "cover-test": "nyc ava && xo --ignore **/built-grammar.js",
+    "cover-test": "nyc ava && xo",
     "cover-publish": "nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [],
   "engines": {
-    "node": ">=4"
+    "node": ">=10"
   },
   "devDependencies": {
     "ava": "^0.15.2",
@@ -34,7 +34,7 @@
     "json5": "^0.5.0",
     "mode-grammar-builder": "^0.6.0",
     "nyc": "^7.0.0",
-    "xo": "^0.16.0"
+    "xo": "^0.56.0"
   },
   "files": [
     "src"
@@ -43,6 +43,45 @@
     "exclude": [
       "src/modes/posix/built-grammar.js",
       "test/_utils.js"
+    ]
+  },
+  "xo": {
+    "ignores": [
+      "**/built-grammar.js"
+    ],
+    "rules": {
+      "unicorn/prefer-module": "off",
+      "import/extensions": "off",
+      "comma-dangle": "off",
+      "capitalized-comments": "off",
+      "no-template-curly-in-string": "off",
+      "padding-line-between-statements": "off",
+      "func-names": "off",
+      "operator-linebreak": "off",
+      "array-element-newline": "off",
+      "object-curly-spacing": "off",
+      "quote-props": "off",
+      "object-shorthand": "off",
+      "unicorn/prevent-abbreviations": "off",
+      "unicorn/no-thenable": "off",
+      "unicorn/filename-case": "off",
+      "func-name-matching": "off",
+      "prefer-spread": "off",
+      "no-multi-assign": "off",
+      "n/prefer-global/process": "off",
+      "prefer-object-spread": "off",
+      "prefer-destructuring": "off",
+      "unicorn/prefer-spread": "off",
+      "no-mixed-spaces-and-tabs": "off",
+      "ava/no-async-fn-without-await": "off"
+    },
+    "overrides": [
+      {
+        "files": "test/_benchmark.js",
+        "rules": {
+          "n/no-unsupported-features/node-builtins": "off"
+        }
+      }
     ]
   },
   "dependencies": {

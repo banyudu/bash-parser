@@ -7,7 +7,6 @@ const bashParser = require('../src');
 const mkloc = require('./_utils').mkloc2;
 const utils = require('./_utils');
 
-/* eslint-disable camelcase */
 test('simple command with prefixes and name', t => {
 	const result = bashParser('a=1 b=2 echo', {insertLOC: true});
 	utils.checkResults(t, result.commands[0], {

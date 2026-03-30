@@ -1,7 +1,7 @@
 'use strict';
 
 function isSpecialParameter(char) {
-	return char.match(/^[0-9\-!@#\?\*\$]$/);
+	return char.match(/^[\d\-!@#?*$]$/);
 }
 
 module.exports = function expansionStart(state, source, reducers) {
@@ -21,7 +21,7 @@ module.exports = function expansionStart(state, source, reducers) {
 		};
 	}
 
-	if (char.match(/[a-zA-Z_]/)) {
+	if (/[a-zA-Z_]/.test(char)) {
 		return {
 			nextReduction: reducers.expansionParameter,
 			nextState: state.appendChar(char).replaceLastExpansion({

@@ -1,4 +1,4 @@
-/* eslint-disable max-lines */
+
 /* eslint-disable camelcase */
 module.exports = {
 	start: 'complete_command',

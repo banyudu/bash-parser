@@ -9,7 +9,7 @@ const tokens = require('../../../utils/tokens');
 
 const expandAlias = (preAliasLexer, resolveAlias, reservedWords) => {
 	function * tryExpandToken(token, expandingAliases) {
-		if (expandingAliases.indexOf(token.value) !== -1) {
+		if (expandingAliases.includes(token.value)) {
 			yield token;
 			return;
 		}
@@ -38,9 +38,9 @@ const expandAlias = (preAliasLexer, resolveAlias, reservedWords) => {
 		WORD: expandToken
 	};
 
-	reservedWords.forEach(w => {
+	for (const w of reservedWords) {
 		visitor[w] = expandToken;
-	});
+	}
 	return visitor;
 };
 

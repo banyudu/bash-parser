@@ -4,7 +4,6 @@ const test = require('ava');
 const bashParser = require('../src');
 const utils = require('./_utils');
 
-/* eslint-disable camelcase */
 test('parameter substitution in assignment', t => {
 	const result = bashParser('echoword=${other}test');
 	// utils.logResults(result);

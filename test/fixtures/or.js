@@ -1,21 +1,21 @@
 module.exports = {
-	sourceCode: "until true || 1; do sleep 1;echo ciao; done",
+	sourceCode: 'until true || 1; do sleep 1;echo ciao; done',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "Until",
+				type: 'Until',
 				clause: {
-					type: "CompoundList",
+					type: 'CompoundList',
 					commands: [
 						{
-							type: "LogicalExpression",
-							op: "or",
+							type: 'LogicalExpression',
+							op: 'or',
 							left: {
-								type: "SimpleCommand",
+								type: 'SimpleCommand',
 								name: {
-									text: "true",
-									type: "Word",
+									text: 'true',
+									type: 'Word',
 									loc: {
 										start: {
 											col: 7,
@@ -43,10 +43,10 @@ module.exports = {
 								}
 							},
 							right: {
-								type: "SimpleCommand",
+								type: 'SimpleCommand',
 								name: {
-									text: "1",
-									type: "Word",
+									text: '1',
+									type: 'Word',
 									loc: {
 										start: {
 											col: 15,
@@ -101,13 +101,13 @@ module.exports = {
 					}
 				},
 				do: {
-					type: "CompoundList",
+					type: 'CompoundList',
 					commands: [
 						{
-							type: "SimpleCommand",
+							type: 'SimpleCommand',
 							name: {
-								text: "sleep",
-								type: "Word",
+								text: 'sleep',
+								type: 'Word',
 								loc: {
 									start: {
 										col: 21,
@@ -135,8 +135,8 @@ module.exports = {
 							},
 							suffix: [
 								{
-									text: "1",
-									type: "Word",
+									text: '1',
+									type: 'Word',
 									loc: {
 										start: {
 											col: 27,
@@ -151,8 +151,8 @@ module.exports = {
 									}
 								},
 								{
-									text: "echo",
-									type: "Word",
+									text: 'echo',
+									type: 'Word',
 									loc: {
 										start: {
 											col: 28,
@@ -167,8 +167,8 @@ module.exports = {
 									}
 								},
 								{
-									text: "ciao",
-									type: "Word",
+									text: 'ciao',
+									type: 'Word',
 									loc: {
 										start: {
 											col: 34,
@@ -225,4 +225,4 @@ module.exports = {
 			}
 		}
 	}
-}
+};

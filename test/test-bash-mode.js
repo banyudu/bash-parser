@@ -7,9 +7,7 @@ const utils = require('./_utils');
 test('alias on reserved word', t => {
 	const result = bashParser('if world', {
 		mode: 'bash',
-		resolveAlias: name => {
-			return name === 'if' ? 'echo' : undefined;
-		}
+		resolveAlias: name => name === 'if' ? 'echo' : undefined
 	});
 	utils.checkResults(t, result, {
 		type: 'Script',

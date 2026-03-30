@@ -2,7 +2,7 @@
 
 const last = require('array-last');
 
-module.exports = function expansionSpecialParameter(state, source, reducers) {
+module.exports = function expansionSpecialParameter(state, source, _reducers) {
 	const char = source && source.shift();
 
 	const xp = last(state.expansion);

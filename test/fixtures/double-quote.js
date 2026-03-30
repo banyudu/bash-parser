@@ -1,15 +1,15 @@
 module.exports = {
-	sourceCode: "echo\"ciao\"'mondo'",
+	sourceCode: 'echo"ciao"\'mondo\'',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "echociaomondo",
-					type: "Word"
+					text: 'echociaomondo',
+					type: 'Word'
 				}
 			}
 		]
 	}
-}
+};

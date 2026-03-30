@@ -26,10 +26,8 @@ function unresolvedExpansions(token) {
 }
 
 module.exports = () => map(token => {
-	if (token.is('WORD') || token.is('ASSIGNMENT_WORD')) {
-		if (!unresolvedExpansions(token)) {
-			return tokens.setValue(token, unquote(token.value));
-		}
+	if ((token.is('WORD') || token.is('ASSIGNMENT_WORD')) && !unresolvedExpansions(token)) {
+		return tokens.setValue(token, unquote(token.value));
 	}
 	return token;
 });

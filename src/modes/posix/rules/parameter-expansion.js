@@ -35,7 +35,7 @@ const handleParameter = (obj, match) => {
 };
 
 function expandParameter(xp, enums) {
-	let parameter = xp.parameter;
+	const parameter = xp.parameter;
 
 	for (const pair of pairs(enums.parameterOperators)) {
 		const re = new RegExp(pair[0]);

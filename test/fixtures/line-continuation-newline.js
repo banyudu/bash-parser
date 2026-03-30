@@ -1,28 +1,28 @@
 module.exports = {
-	sourceCode: "echo \\\n\n\necho there",
+	sourceCode: 'echo \\\n\n\necho there',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "echo",
-					type: "Word"
+					text: 'echo',
+					type: 'Word'
 				}
 			},
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "echo",
-					type: "Word"
+					text: 'echo',
+					type: 'Word'
 				},
 				suffix: [
 					{
-						text: "there",
-						type: "Word"
+						text: 'there',
+						type: 'Word'
 					}
 				]
 			}
 		]
 	}
-}
+};

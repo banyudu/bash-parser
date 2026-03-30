@@ -6,7 +6,7 @@ const utils = require('./_utils');
 // const mkloc = require('./_utils').mkloc2;
 
 test('empty line after line continuation', t => {
-	const cmd = `echo \\\n\n\necho there`;
+	const cmd = 'echo \\\n\n\necho there';
 	const result = bashParser(cmd);
 	// utils.logResults(result);
 	const expected = {

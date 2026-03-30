@@ -4,7 +4,6 @@ const test = require('ava');
 const bashParser = require('../src');
 const utils = require('./_utils');
 
-/* eslint-disable camelcase */
 test('Redirect should be allowed immediately following argument', t => {
 	const result = bashParser('echo foo>file.txt');
 

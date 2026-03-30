@@ -1,13 +1,13 @@
 module.exports = {
-	sourceCode: "echo 2> 43",
+	sourceCode: 'echo 2> 43',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "echo",
-					type: "Word",
+					text: 'echo',
+					type: 'Word',
 					loc: {
 						start: {
 							col: 1,
@@ -35,10 +35,10 @@ module.exports = {
 				},
 				suffix: [
 					{
-						type: "Redirect",
+						type: 'Redirect',
 						op: {
-							text: ">",
-							type: "great",
+							text: '>',
+							type: 'great',
 							loc: {
 								start: {
 									col: 7,
@@ -53,8 +53,8 @@ module.exports = {
 							}
 						},
 						file: {
-							text: "43",
-							type: "Word",
+							text: '43',
+							type: 'Word',
 							loc: {
 								start: {
 									col: 9,
@@ -81,8 +81,8 @@ module.exports = {
 							}
 						},
 						numberIo: {
-							text: "2",
-							type: "io_number",
+							text: '2',
+							type: 'io_number',
 							loc: {
 								start: {
 									col: 6,
@@ -113,4 +113,4 @@ module.exports = {
 			}
 		}
 	}
-}
+};
