@@ -32,8 +32,10 @@ module.exports = function expansionStart(state, source, reducers) {
 	}
 
 	if (isSpecialParameter(char)) {
-		return reducers.expansionSpecialParameter(state, [char].concat(source));
+		return reducers.expansionSpecialParameter(state, [char].concat(source), reducers);
 	}
 
-	return state.previousReducer(state, [char].concat(source));
+	// $ not followed by a valid expansion character — treat as literal.
+	const cleanState = state.removeLastExpansion();
+	return cleanState.previousReducer(cleanState, [char].concat(source), reducers);
 };

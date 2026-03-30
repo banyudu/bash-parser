@@ -25,6 +25,18 @@ test('Redirect should be allowed immediately following argument', t => {
 	});
 });
 
+test('Literal $ inside double quotes should not crash', t => {
+	const result = bashParser('echo "foo$/"');
+	utils.checkResults(t, result, {
+		type: 'Script',
+		commands: [{
+			type: 'Command',
+			name: {type: 'Word', text: 'echo'},
+			suffix: [{type: 'Word', text: 'foo$/'}]
+		}]
+	});
+});
+
 test('Equal sign should be allowed in arguments', t => {
 	const result = bashParser('echo foo=bar');
 	utils.checkResults(t, result, {

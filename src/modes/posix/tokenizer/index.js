@@ -46,6 +46,10 @@ const mkImmutableState = reducers => class ImmutableState {
 		return this.setExpansion(expansion);
 	}
 
+	removeLastExpansion() {
+		return this.setExpansion((this.expansion || []).slice(0, -1));
+	}
+
 	appendChar(char) {
 		return new ImmutableState(Object.assign({}, this, {current: this.current + char}));
 	}
@@ -122,6 +126,11 @@ const mkMutableState = reducers => class {
 		this.expansion.push({
 			loc: {start: Object.assign({}, this.loc.current)}
 		});
+		return this;
+	}
+
+	removeLastExpansion() {
+		this.expansion = (this.expansion || []).slice(0, -1);
 		return this;
 	}
 
