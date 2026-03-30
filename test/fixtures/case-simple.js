@@ -1,36 +1,36 @@
 module.exports = {
-	sourceCode: "case foo in * ) echo bar;; esac",
+	sourceCode: 'case foo in * ) echo bar;; esac',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "Case",
+				type: 'Case',
 				clause: {
-					text: "foo",
-					type: "Word"
+					text: 'foo',
+					type: 'Word'
 				},
 				cases: [
 					{
-						type: "CaseItem",
+						type: 'CaseItem',
 						pattern: [
 							{
-								text: "*",
-								type: "Word"
+								text: '*',
+								type: 'Word'
 							}
 						],
 						body: {
-							type: "CompoundList",
+							type: 'CompoundList',
 							commands: [
 								{
-									type: "SimpleCommand",
+									type: 'SimpleCommand',
 									name: {
-										text: "echo",
-										type: "Word"
+										text: 'echo',
+										type: 'Word'
 									},
 									suffix: [
 										{
-											text: "bar",
-											type: "Word"
+											text: 'bar',
+											type: 'Word'
 										}
 									]
 								}
@@ -41,4 +41,4 @@ module.exports = {
 			}
 		]
 	}
-}
+};

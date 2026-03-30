@@ -1,13 +1,13 @@
 module.exports = {
-	sourceCode: "case foo in\n\t* )\n\t\techo bar;;\nesac\n",
+	sourceCode: 'case foo in\n\t* )\n\t\techo bar;;\nesac\n',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "Case",
+				type: 'Case',
 				clause: {
-					text: "foo",
-					type: "Word",
+					text: 'foo',
+					type: 'Word',
 					loc: {
 						start: {
 							col: 6,
@@ -23,11 +23,11 @@ module.exports = {
 				},
 				cases: [
 					{
-						type: "CaseItem",
+						type: 'CaseItem',
 						pattern: [
 							{
-								text: "*",
-								type: "Word",
+								text: '*',
+								type: 'Word',
 								loc: {
 									start: {
 										col: 2,
@@ -43,13 +43,13 @@ module.exports = {
 							}
 						],
 						body: {
-							type: "CompoundList",
+							type: 'CompoundList',
 							commands: [
 								{
-									type: "SimpleCommand",
+									type: 'SimpleCommand',
 									name: {
-										text: "echo",
-										type: "Word",
+										text: 'echo',
+										type: 'Word',
 										loc: {
 											start: {
 												col: 3,
@@ -77,8 +77,8 @@ module.exports = {
 									},
 									suffix: [
 										{
-											text: "bar",
-											type: "Word",
+											text: 'bar',
+											type: 'Word',
 											loc: {
 												start: {
 													col: 8,
@@ -149,4 +149,4 @@ module.exports = {
 			}
 		}
 	}
-}
+};

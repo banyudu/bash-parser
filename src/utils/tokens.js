@@ -20,18 +20,23 @@ class Token {
 	appendTo(chunk) {
 		return new Token(Object.assign({}, this, {value: this.value + chunk}));
 	}
+
 	changeTokenType(type, value) {
 		return new Token({type, value, loc: this.loc, _: this._, expansion: this.expansion});
 	}
+
 	setValue(value) {
 		return new Token(Object.assign({}, this, {value}));
 	}
+
 	alterValue(value) {
 		return new Token(Object.assign({}, this, {value, originalText: this.originalText || this.value}));
 	}
+
 	addExpansions() {
 		return new Token(Object.assign({}, this, {expansion: []}));
 	}
+
 	setExpansions(expansion) {
 		return new Token(Object.assign({}, this, {expansion}));
 	}
@@ -41,7 +46,7 @@ exports.token = args => new Token(args);
 
 function mkToken(type, value, loc, expansion) {
 	const tk = new Token({type, value, loc});
-	if (expansion && expansion.length) {
+	if (expansion && expansion.length > 0) {
 		tk.expansion = expansion;
 	}
 
@@ -73,13 +78,13 @@ exports.setExpansions = (tk, expansion) => tk.setExpansions(expansion);
 
 exports.tokenOrEmpty = function tokenOrEmpty(state) {
 	if (state.current !== '' && state.current !== '\n') {
-		const expansion = (state.expansion || []).map(xp => {
+		const expansion = (state.expansion || []).map(xp =>
 			// console.log('aaa', {token: state.loc, xp: xp.loc});
-			return Object.assign({}, xp, {loc: {
+			 Object.assign({}, xp, {loc: {
 				start: xp.loc.start.char - state.loc.start.char,
 				end: xp.loc.end.char - state.loc.start.char
-			}});
-		});
+			}})
+		);
 		const token = mkToken('TOKEN', state.current, {
 			start: Object.assign({}, state.loc.start),
 			end: Object.assign({}, state.loc.previous)
@@ -87,7 +92,7 @@ exports.tokenOrEmpty = function tokenOrEmpty(state) {
 
 		/* if (state.expansion && state.expansion.length) {
 			token.expansion = state.expansion;
-		}*/
+		} */
 
 		return [token];
 	}

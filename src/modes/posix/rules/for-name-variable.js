@@ -6,7 +6,7 @@ const isValidName = require('../../../utils/is-valid-name');
 
 module.exports = function forNameVariable() {
 	return compose(map((tk, idx, iterable) => {
-		let lastToken = iterable.behind(1) || {is: () => false};
+		const lastToken = iterable.behind(1) || {is: () => false};
 
 		// if last token is For and current token form a valid name
 		// type of token is changed from WORD to NAME

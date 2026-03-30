@@ -92,7 +92,7 @@ const parameterOps = {
 		parameter: m => m[1]
 	},
 
-	[`^([1-9][0-9]*)$`]: {
+	'^([1-9][0-9]*)$': {
 		kind: 'positional',
 		parameter: m => Number(m[1])
 	},

@@ -1,34 +1,34 @@
 module.exports = {
-	sourceCode: "foo | IFS= read var",
+	sourceCode: 'foo | IFS= read var',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "Pipeline",
+				type: 'Pipeline',
 				commands: [
 					{
-						type: "SimpleCommand",
+						type: 'SimpleCommand',
 						name: {
-							text: "foo",
-							type: "Word"
+							text: 'foo',
+							type: 'Word'
 						}
 					},
 					{
-						type: "SimpleCommand",
+						type: 'SimpleCommand',
 						name: {
-							text: "read",
-							type: "Word"
+							text: 'read',
+							type: 'Word'
 						},
 						prefix: [
 							{
-								text: "IFS=",
-								type: "AssignmentWord"
+								text: 'IFS=',
+								type: 'AssignmentWord'
 							}
 						],
 						suffix: [
 							{
-								text: "var",
-								type: "Word"
+								text: 'var',
+								type: 'Word'
 							}
 						]
 					}
@@ -36,4 +36,4 @@ module.exports = {
 			}
 		]
 	}
-}
+};

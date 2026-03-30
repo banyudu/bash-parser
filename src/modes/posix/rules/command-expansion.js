@@ -9,7 +9,7 @@ function setCommandExpansion(xp, token) {
 	let command = xp.command;
 
 	if (token.value[xp.loc.start - 1] === '`') {
-		command = command.replace(/\\`/g, '`');
+		command = command.replaceAll('\\`', '`');
 	}
 
 	const bashParser = require('../../../index');

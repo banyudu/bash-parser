@@ -1,32 +1,32 @@
 module.exports = {
-	sourceCode: "echoword=$$",
+	sourceCode: 'echoword=$$',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "",
-					type: "Word"
+					text: '',
+					type: 'Word'
 				},
 				prefix: [
 					{
-						text: "echoword=$$",
+						text: 'echoword=$$',
 						expansion: [
 							{
 								loc: {
 									start: 9,
 									end: 10
 								},
-								parameter: "$",
-								type: "ParameterExpansion",
-								kind: "shell-process-id"
+								parameter: '$',
+								type: 'ParameterExpansion',
+								kind: 'shell-process-id'
 							}
 						],
-						type: "AssignmentWord"
+						type: 'AssignmentWord'
 					}
 				]
 			}
 		]
 	}
-}
+};

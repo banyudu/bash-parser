@@ -4,7 +4,6 @@ const test = require('ava');
 const bashParser = require('../src');
 const utils = require('./_utils');
 
-/* eslint-disable camelcase */
 test('positional list paramter', t => {
 	const result = bashParser('echoword=$@');
 	// console.log(JSON.stringify(result, null, 5))

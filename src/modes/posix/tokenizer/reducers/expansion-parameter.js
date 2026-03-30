@@ -16,7 +16,7 @@ module.exports = function expansionParameter(state, source, reducers) {
 		};
 	}
 
-	if (char.match(/[0-9a-zA-Z_]/)) {
+	if (/\w/.test(char)) {
 		return {
 			nextReduction: reducers.expansionParameter,
 			nextState: state.appendChar(char).replaceLastExpansion({

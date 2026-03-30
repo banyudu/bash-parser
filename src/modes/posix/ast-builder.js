@@ -56,7 +56,7 @@ module.exports = options => {
 	};
 
 	function isAsyncSeparator(separator) {
-		return separator.text.indexOf('&') !== -1;
+		return separator.text.includes('&');
 	}
 
 	const last = require('array-last');
@@ -82,7 +82,7 @@ module.exports = options => {
 	builder.addRedirections = (compoundCommand, redirectList) => {
 		compoundCommand.redirections = redirectList;
 		if (options.insertLOC) {
-			const lastRedirect = redirectList[redirectList.length - 1];
+			const lastRedirect = redirectList.at(-1);
 			setLocEnd(compoundCommand.loc, lastRedirect.loc);
 		}
 		return compoundCommand;
@@ -256,12 +256,12 @@ module.exports = options => {
 			}
 
 			if (suffix) {
-				const lastSuffix = suffix[suffix.length - 1];
+				const lastSuffix = suffix.at(-1);
 				node.loc.end = lastSuffix.loc.end;
 			} else if (command) {
 				node.loc.end = command.loc.end;
 			} else {
-				const lastPrefix = prefix[prefix.length - 1];
+				const lastPrefix = prefix.at(-1);
 				node.loc.end = lastPrefix.loc.end;
 			}
 		}
@@ -309,9 +309,7 @@ function setLocEnd(target, source) {
 }
 
 function mkListHelper(builder, listName) {
-	builder[listName] = item => {
-		return [item];
-	};
+	builder[listName] = item => [item];
 	builder[`${listName}Append`] = (list, item) => {
 		list.push(item);
 		return list;

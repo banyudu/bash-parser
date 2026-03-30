@@ -83,7 +83,7 @@ const mkImmutableState = reducers => class ImmutableState {
 
 		loc.current.char++;
 
-		if (char && char.match(/\s/) && this.current === '') {
+		if (char && /\s/.test(char) && this.current === '') {
 			loc.start = Object.assign({}, loc.current);
 		}
 
@@ -135,7 +135,7 @@ const mkMutableState = reducers => class {
 	}
 
 	appendChar(char) {
-		this.current = this.current + char;
+		this.current += char;
 		return this;
 	}
 
@@ -179,7 +179,7 @@ const mkMutableState = reducers => class {
 
 		loc.current.char++;
 
-		if (char && char.match(/\s/) && this.current === '') {
+		if (char && /\s/.test(char) && this.current === '') {
 			loc.start = Object.assign({}, loc.current);
 		}
 
@@ -211,11 +211,7 @@ module.exports = (options, reducers) => function * tokenizer(src) {
 			throw new Error('Loop detected');
 		} */
 
-		if (nextState) {
-			state = nextState.advanceLoc(char);
-		} else {
-			state = state.advanceLoc(char);
-		}
+		state = nextState ? nextState.advanceLoc(char) : state.advanceLoc(char);
 
 		reduction = nextReduction;
 	}

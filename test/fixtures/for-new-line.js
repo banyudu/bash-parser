@@ -1,13 +1,13 @@
 module.exports = {
-	sourceCode: "for x\n\tin ; do\n\techo $x;\ndone\n",
+	sourceCode: 'for x\n\tin ; do\n\techo $x;\ndone\n',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "For",
+				type: 'For',
 				name: {
-					text: "x",
-					type: "Name",
+					text: 'x',
+					type: 'Name',
 					loc: {
 						start: {
 							col: 5,
@@ -22,13 +22,13 @@ module.exports = {
 					}
 				},
 				do: {
-					type: "CompoundList",
+					type: 'CompoundList',
 					commands: [
 						{
-							type: "SimpleCommand",
+							type: 'SimpleCommand',
 							name: {
-								text: "echo",
-								type: "Word",
+								text: 'echo',
+								type: 'Word',
 								loc: {
 									start: {
 										col: 2,
@@ -56,18 +56,18 @@ module.exports = {
 							},
 							suffix: [
 								{
-									text: "$x",
+									text: '$x',
 									expansion: [
 										{
 											loc: {
 												start: 0,
 												end: 1
 											},
-											parameter: "x",
-											type: "ParameterExpansion"
+											parameter: 'x',
+											type: 'ParameterExpansion'
 										}
 									],
-									type: "Word",
+									type: 'Word',
 									loc: {
 										start: {
 											col: 7,
@@ -124,4 +124,4 @@ module.exports = {
 			}
 		}
 	}
-}
+};

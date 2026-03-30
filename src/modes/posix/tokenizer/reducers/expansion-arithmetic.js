@@ -10,7 +10,7 @@ module.exports = function expansionArithmetic(state, source) {
 
 	const xp = last(state.expansion);
 
-	if (char === ')' && state.current.slice(-1)[0] === ')') {
+	if (char === ')' && state.current.at(-1) === ')') {
 		return {
 			nextReduction: state.previousReducer,
 			nextState: state

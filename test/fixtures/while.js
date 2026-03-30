@@ -1,35 +1,35 @@
 module.exports = {
-	sourceCode: "while true; do sleep 1; done",
+	sourceCode: 'while true; do sleep 1; done',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "While",
+				type: 'While',
 				clause: {
-					type: "CompoundList",
+					type: 'CompoundList',
 					commands: [
 						{
-							type: "SimpleCommand",
+							type: 'SimpleCommand',
 							name: {
-								text: "true",
-								type: "Word"
+								text: 'true',
+								type: 'Word'
 							}
 						}
 					]
 				},
 				do: {
-					type: "CompoundList",
+					type: 'CompoundList',
 					commands: [
 						{
-							type: "SimpleCommand",
+							type: 'SimpleCommand',
 							name: {
-								text: "sleep",
-								type: "Word"
+								text: 'sleep',
+								type: 'Word'
 							},
 							suffix: [
 								{
-									text: "1",
-									type: "Word"
+									text: '1',
+									type: 'Word'
 								}
 							]
 						}
@@ -38,4 +38,4 @@ module.exports = {
 			}
 		]
 	}
-}
+};

@@ -1,21 +1,21 @@
 module.exports = {
-	sourceCode: "i\"f\" true",
+	sourceCode: 'i"f" true',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "if",
-					type: "Word"
+					text: 'if',
+					type: 'Word'
 				},
 				suffix: [
 					{
-						text: "true",
-						type: "Word"
+						text: 'true',
+						type: 'Word'
 					}
 				]
 			}
 		]
 	}
-}
+};

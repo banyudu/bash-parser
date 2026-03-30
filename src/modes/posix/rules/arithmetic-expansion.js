@@ -1,5 +1,4 @@
 'use strict';
-/* eslint-disable camelcase */
 
 const map = require('map-iterable');
 const babylon = require('babylon');
@@ -11,8 +10,8 @@ function parseArithmeticAST(xp) {
 	let AST;
 	try {
 		AST = babylon.parse(xp.expression);
-	} catch (err) {
-		throw new SyntaxError(`Cannot parse arithmetic expression "${xp.expression}": ${err.message}`);
+	} catch (error) {
+		throw new SyntaxError(`Cannot parse arithmetic expression "${xp.expression}": ${error.message}`);
 	}
 
 	const expression = AST.program.body[0].expression;

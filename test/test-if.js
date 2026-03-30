@@ -4,7 +4,6 @@ const test = require('ava');
 const bashParser = require('../src');
 const utils = require('./_utils');
 
-/* eslint-disable camelcase */
 test('parse if', t => {
 	const result = bashParser('if true; then echo 1; fi');
 	// console.log(inspect(result, {depth:null}))

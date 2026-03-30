@@ -13,7 +13,7 @@ exports.mkloc2 = function mkloc(startLine, startColumn, endLine, endColumn, star
 };
 
 exports.logResults = function logResults(results) {
-	console.log(json.stringify(results, null, '\t').replace(/"/g, '\''));
+	console.log(json.stringify(results, null, '\t').replaceAll('"', '\''));
 };
 
 exports.checkResults = function check(t, actual, expected) {
@@ -36,7 +36,7 @@ exports.checkResults = function check(t, actual, expected) {
 			}
 
 		}
-	}*/
+	} */
 	// exports.logResults(actual);
 	t.deepEqual(actual, expected);
 };

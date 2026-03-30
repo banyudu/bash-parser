@@ -1,13 +1,13 @@
 module.exports = {
-	sourceCode: "foo () {\n\tcommand bar --lol;\n}\n",
+	sourceCode: 'foo () {\n\tcommand bar --lol;\n}\n',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "Function",
+				type: 'Function',
 				name: {
-					text: "foo",
-					type: "Name",
+					text: 'foo',
+					type: 'Name',
 					loc: {
 						start: {
 							col: 1,
@@ -22,13 +22,13 @@ module.exports = {
 					}
 				},
 				body: {
-					type: "CompoundList",
+					type: 'CompoundList',
 					commands: [
 						{
-							type: "SimpleCommand",
+							type: 'SimpleCommand',
 							name: {
-								text: "command",
-								type: "Word",
+								text: 'command',
+								type: 'Word',
 								loc: {
 									start: {
 										col: 2,
@@ -56,8 +56,8 @@ module.exports = {
 							},
 							suffix: [
 								{
-									text: "bar",
-									type: "Word",
+									text: 'bar',
+									type: 'Word',
 									loc: {
 										start: {
 											col: 10,
@@ -72,8 +72,8 @@ module.exports = {
 									}
 								},
 								{
-									text: "--lol",
-									type: "Word",
+									text: '--lol',
+									type: 'Word',
 									loc: {
 										start: {
 											col: 14,
@@ -130,4 +130,4 @@ module.exports = {
 			}
 		}
 	}
-}
+};

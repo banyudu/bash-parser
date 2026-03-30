@@ -42,7 +42,7 @@ module.exports = {
 		let grammar = null;
 		try {
 			grammar = require('./built-grammar');
-		} catch (err) {}
+		} catch {}
 		return {
 			enums,
 			phaseCatalog,

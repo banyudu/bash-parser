@@ -1,21 +1,21 @@
 module.exports = {
-	sourceCode: "echo '${echo } $ciao'",
+	sourceCode: 'echo \'${echo } $ciao\'',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "echo",
-					type: "Word"
+					text: 'echo',
+					type: 'Word'
 				},
 				suffix: [
 					{
-						text: "${echo } $ciao",
-						type: "Word"
+						text: '${echo } $ciao',
+						type: 'Word'
 					}
 				]
 			}
 		]
 	}
-}
+};

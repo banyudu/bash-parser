@@ -1,28 +1,28 @@
 module.exports = {
-	sourceCode: "\"foo $(other) $(one) baz\"",
+	sourceCode: '"foo $(other) $(one) baz"',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "foo bar bar baz",
+					text: 'foo bar bar baz',
 					expansion: [
 						{
 							loc: {
 								start: 5,
 								end: 12
 							},
-							command: "other",
-							type: "CommandExpansion",
+							command: 'other',
+							type: 'CommandExpansion',
 							commandAST: {
-								type: "Script",
+								type: 'Script',
 								commands: [
 									{
-										type: "SimpleCommand",
+										type: 'SimpleCommand',
 										name: {
-											text: "other",
-											type: "Word"
+											text: 'other',
+											type: 'Word'
 										}
 									}
 								]
@@ -34,16 +34,16 @@ module.exports = {
 								start: 14,
 								end: 19
 							},
-							command: "one",
-							type: "CommandExpansion",
+							command: 'one',
+							type: 'CommandExpansion',
 							commandAST: {
-								type: "Script",
+								type: 'Script',
 								commands: [
 									{
-										type: "SimpleCommand",
+										type: 'SimpleCommand',
 										name: {
-											text: "one",
-											type: "Word"
+											text: 'one',
+											type: 'Word'
 										}
 									}
 								]
@@ -51,10 +51,10 @@ module.exports = {
 							resolved: true
 						}
 					],
-					originalText: "\"foo $(other) $(one) baz\"",
-					type: "Word"
+					originalText: '"foo $(other) $(one) baz"',
+					type: 'Word'
 				}
 			}
 		]
 	}
-}
+};

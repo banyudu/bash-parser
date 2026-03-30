@@ -1,18 +1,18 @@
 module.exports = {
-	sourceCode: "( ls )",
+	sourceCode: '( ls )',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "Subshell",
+				type: 'Subshell',
 				list: {
-					type: "CompoundList",
+					type: 'CompoundList',
 					commands: [
 						{
-							type: "SimpleCommand",
+							type: 'SimpleCommand',
 							name: {
-								text: "ls",
-								type: "Word"
+								text: 'ls',
+								type: 'Word'
 							}
 						}
 					]
@@ -20,4 +20,4 @@ module.exports = {
 			}
 		]
 	}
-}
+};

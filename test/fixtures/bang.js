@@ -1,23 +1,23 @@
 module.exports = {
-	sourceCode: "! run | cry",
+	sourceCode: '! run | cry',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "Pipeline",
+				type: 'Pipeline',
 				commands: [
 					{
-						type: "SimpleCommand",
+						type: 'SimpleCommand',
 						name: {
-							text: "run",
-							type: "Word"
+							text: 'run',
+							type: 'Word'
 						}
 					},
 					{
-						type: "SimpleCommand",
+						type: 'SimpleCommand',
 						name: {
-							text: "cry",
-							type: "Word"
+							text: 'cry',
+							type: 'Word'
 						}
 					}
 				],
@@ -25,4 +25,4 @@ module.exports = {
 			}
 		]
 	}
-}
+};

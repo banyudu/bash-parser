@@ -1,21 +1,21 @@
 module.exports = {
-	sourceCode: "echo ~/subdir/~other/",
+	sourceCode: 'echo ~/subdir/~other/',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "echo",
-					type: "Word"
+					text: 'echo',
+					type: 'Word'
 				},
 				suffix: [
 					{
-						text: "/home/current/subdir/~other/",
-						type: "Word"
+						text: '/home/current/subdir/~other/',
+						type: 'Word'
 					}
 				]
 			}
 		]
 	}
-}
+};

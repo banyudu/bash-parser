@@ -33,7 +33,7 @@ module.exports = function parse(sourceCode, options) {
 
 		const ast = parser.parse(sourceCode);
 
-/*
+		/*
 		const fixtureFolder = `${__dirname}/../test/fixtures`;
 		const json = require('json5');
 		const {writeFileSync} = require('fs');
@@ -45,10 +45,10 @@ module.exports = function parse(sourceCode, options) {
 		}, null, '\t'));
 */
 		return ast;
-	} catch (err) {
-		if (err instanceof SyntaxError) {
-			throw err;
+	} catch (error) {
+		if (error instanceof SyntaxError) {
+			throw error;
 		}
-		throw new Error(err.stack || err.message);
+		throw new Error(error.stack || error.message);
 	}
 };

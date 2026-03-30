@@ -1,31 +1,31 @@
 module.exports = {
-	sourceCode: "echo word${other}test",
+	sourceCode: 'echo word${other}test',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "echo",
-					type: "Word"
+					text: 'echo',
+					type: 'Word'
 				},
 				suffix: [
 					{
-						text: "word${other}test",
+						text: 'word${other}test',
 						expansion: [
 							{
 								loc: {
 									start: 4,
 									end: 11
 								},
-								parameter: "other",
-								type: "ParameterExpansion"
+								parameter: 'other',
+								type: 'ParameterExpansion'
 							}
 						],
-						type: "Word"
+						type: 'Word'
 					}
 				]
 			}
 		]
 	}
-}
+};

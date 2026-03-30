@@ -1,37 +1,37 @@
 module.exports = {
-	sourceCode: "variable=$((42 + 43)) $ciao",
+	sourceCode: 'variable=$((42 + 43)) $ciao',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "$ciao",
+					text: '$ciao',
 					expansion: [
 						{
 							loc: {
 								start: 0,
 								end: 4
 							},
-							parameter: "ciao",
-							type: "ParameterExpansion"
+							parameter: 'ciao',
+							type: 'ParameterExpansion'
 						}
 					],
-					type: "Word"
+					type: 'Word'
 				},
 				prefix: [
 					{
-						text: "variable=$((42 + 43))",
+						text: 'variable=$((42 + 43))',
 						expansion: [
 							{
 								loc: {
 									start: 9,
 									end: 20
 								},
-								type: "ArithmeticExpansion",
-								expression: "42 + 43",
+								type: 'ArithmeticExpansion',
+								expression: '42 + 43',
 								arithmeticAST: {
-									type: "BinaryExpression",
+									type: 'BinaryExpression',
 									start: 0,
 									end: 7,
 									loc: {
@@ -45,7 +45,7 @@ module.exports = {
 										}
 									},
 									left: {
-										type: "NumericLiteral",
+										type: 'NumericLiteral',
 										start: 0,
 										end: 2,
 										loc: {
@@ -60,13 +60,13 @@ module.exports = {
 										},
 										extra: {
 											rawValue: 42,
-											raw: "42"
+											raw: '42'
 										},
 										value: 42
 									},
-									operator: "+",
+									operator: '+',
 									right: {
-										type: "NumericLiteral",
+										type: 'NumericLiteral',
 										start: 5,
 										end: 7,
 										loc: {
@@ -81,17 +81,17 @@ module.exports = {
 										},
 										extra: {
 											rawValue: 43,
-											raw: "43"
+											raw: '43'
 										},
 										value: 43
 									}
 								}
 							}
 						],
-						type: "AssignmentWord"
+						type: 'AssignmentWord'
 					}
 				]
 			}
 		]
 	}
-}
+};

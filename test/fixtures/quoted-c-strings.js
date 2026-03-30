@@ -1,15 +1,15 @@
 module.exports = {
-	sourceCode: "\"ec\\t\\nho\"",
+	sourceCode: '"ec\\t\\nho"',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "SimpleCommand",
+				type: 'SimpleCommand',
 				name: {
-					text: "ec\t\nho",
-					type: "Word"
+					text: 'ec\t\nho',
+					type: 'Word'
 				}
 			}
 		]
 	}
-}
+};

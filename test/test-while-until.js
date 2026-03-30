@@ -4,7 +4,6 @@ const test = require('ava');
 const bashParser = require('../src');
 const utils = require('./_utils');
 
-/* eslint-disable camelcase */
 test('parse while', t => {
 	const result = bashParser('while true; do sleep 1; done');
 
@@ -35,7 +34,7 @@ test('parse while', t => {
 
 test('parse until', t => {
 	const result = bashParser('until true; do sleep 1; done');
- //	console.log(inspect(result, {depth:null}))
+	//	console.log(inspect(result, {depth:null}))
 	utils.checkResults(t,
 		result, {
 			type: 'Script',

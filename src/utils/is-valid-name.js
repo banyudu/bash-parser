@@ -6,5 +6,5 @@
 */
 
 module.exports = function isValidName(text) {
-	return /^[a-zA-Z_][a-zA-Z0-9_]*$/.test(text);
+	return /^[a-zA-Z_]\w*$/.test(text);
 };

@@ -1,5 +1,4 @@
 'use strict';
-/* eslint-disable camelcase */
 
 const test = require('ava');
 const bashParser = require('../src');

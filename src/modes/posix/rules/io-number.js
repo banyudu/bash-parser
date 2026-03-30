@@ -7,7 +7,7 @@ module.exports = function ioNumber(options, mode) {
 	return compose(map((tk, idx, iterable) => {
 		const next = iterable.ahead(1);
 
-		if (tk && tk.is('WORD') && tk.value.match(/^[0-9]+$/) && mode.enums.IOFileOperators.isOperator(next)) {
+		if (tk && tk.is('WORD') && /^\d+$/.test(tk.value) && mode.enums.IOFileOperators.isOperator(next)) {
 			return tk.changeTokenType('IO_NUMBER', tk.value);
 		}
 

@@ -1,18 +1,18 @@
 module.exports = {
-	sourceCode: "(echo)",
+	sourceCode: '(echo)',
 	result: {
-		type: "Script",
+		type: 'Script',
 		commands: [
 			{
-				type: "Subshell",
+				type: 'Subshell',
 				list: {
-					type: "CompoundList",
+					type: 'CompoundList',
 					commands: [
 						{
-							type: "SimpleCommand",
+							type: 'SimpleCommand',
 							name: {
-								text: "echo",
-								type: "Word",
+								text: 'echo',
+								type: 'Word',
 								loc: {
 									start: {
 										col: 2,
@@ -80,4 +80,4 @@ module.exports = {
 			}
 		}
 	}
-}
+};

@@ -3,7 +3,6 @@
 const test = require('ava');
 const bashParser = require('../src');
 const utils = require('./_utils');
-/* eslint-disable camelcase */
 
 test('loc in while statement', t => {
 	const result = bashParser('while true && 1; do sleep 1;echo ciao; done', {insertLOC: true});
