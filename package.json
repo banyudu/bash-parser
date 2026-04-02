@@ -1,6 +1,10 @@
 {
   "name": "bash-parser",
   "version": "0.5.0",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "main": "src/index.js",
   "description": "Standard-compliant bash parser",
   "repository": {
@@ -20,6 +24,7 @@
     "doc": "doctoc",
     "test": "ava && xo",
     "build": "mgb ./src/modes posix && mgb ./src/modes bash && mgb ./src/modes word-expansion",
+    "prepublishOnly": "npm run build",
     "cover-test": "nyc ava && xo",
     "cover-publish": "nyc report --reporter=text-lcov | coveralls"
   },
