@@ -349,7 +349,7 @@ Word and AssignmentWord could optionally contain a list of expansion to perform 
 
 > Represent a command substitution operation to perform on the Word.
 
-> The parsing of the command is done recursively using `bash-parser` itself.
+> The parsing of the command is done recursively using `@banyudu/bash-parser` itself.
 
 > The `loc.start` property contains the index of the character in the Word text where the substitution starts. The `loc.end` property contains the index where it the ends.
 
@@ -390,4 +390,3 @@ Word and AssignmentWord could optionally contain a list of expansion to perform 
 	}
 }
 ```
-

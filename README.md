@@ -7,13 +7,13 @@ This fork is maintained at `github.com/banyudu/bash-parser`.
 # Installation
 
 ```bash
-npm install github:banyudu/bash-parser
+npm install @banyudu/bash-parser
 ```
 
 # Usage
 
 ```js
-  const parse = require('bash-parser');
+  const parse = require('@banyudu/bash-parser');
   const ast = parse('echo ciao');
 ```
 

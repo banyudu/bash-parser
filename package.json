@@ -1,6 +1,6 @@
 {
-  "name": "bash-parser",
-  "version": "0.5.0",
+  "name": "@banyudu/bash-parser",
+  "version": "0.5.1",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
@@ -25,6 +25,7 @@
     "test": "ava && xo",
     "build": "mgb ./src/modes posix && mgb ./src/modes bash && mgb ./src/modes word-expansion",
     "prepublishOnly": "npm run build",
+    "postversion": "npm run build && git push --follow-tags && npm publish",
     "cover-test": "nyc ava && xo",
     "cover-publish": "nyc report --reporter=text-lcov | coveralls"
   },
